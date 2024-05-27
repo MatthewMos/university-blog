@@ -70,7 +70,6 @@ img {
 	white-space: nowrap;
 	font-family: Sen;
 	font-size: 16px;
-	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
@@ -79,7 +78,84 @@ img {
 }
 
 .baner {
-	background-image: url(../img/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-840996.png);
+	background-image: url(../img/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.png);
+	padding: 128px 556px 192px 80px;
+}
+.title_text {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5%;
+	font-family: Inter;
+	font-size: 16px;
+
+	line-height: 1.25;
+	letter-spacing: 3px;
+	text-align: left;
+	color: #fff;
+	margin-bottom: 2%;
+}
+.title_text_2 {
+	font-weight: 900;
+}
+.baner h1 {
+	font-family: Sen;
+	font-size: 56px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.14;
+	letter-spacing: -2px;
+	text-align: left;
+	color: #fff;
+	margin-bottom: 2%;
+}
+.author_title {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: left;
+	color: #fff;
+	margin-bottom: 2%;
+}
+.author_title a {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: left;
+	color: #ffd050;
+}
+.baner p {
+	font-family: Inter;
+	font-size: 16px;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: left;
+	color: #fff;
+	margin-bottom: 3%;
+}
+.title_text_a {
+	font-family: Sen;
+	font-size: 18px;
+	font-weight: bold;
+	color: #232536;
+	width: 204px;
+	padding: 16px 47px;
+	background-color: #ffd050;
+}
+.news_posts {
+	display: flex;
+	flex-direction: row;
+	margin: 130px 80px 130px 80px;
 }
 
 footer {
