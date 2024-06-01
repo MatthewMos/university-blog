@@ -42,23 +42,17 @@ img {
 	letter-spacing: normal;
 	text-align: left;
 	color: #fff;
-	white-space: nowrap;
 }
 
 .nav_a {
 	margin: 0 0 0 7%;
-	padding: 16px 48px;
+	padding: 16px 38px;
 	background-color: #fff;
 	font-family: Inter;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: 1.33;
-	letter-spacing: normal;
 	text-align: left;
 	color: #232536;
-	white-space: nowrap;
 }
 .links {
 	display: flex;
@@ -157,6 +151,103 @@ img {
 	flex-direction: row;
 	margin: 130px 80px 130px 80px;
 }
+.featured_post {
+	width: 55%;
+	margin-right: 3%;
+	padding: 1.5%;
+	border: solid 0.5px #6d6e76;
+}
+.featured_post h1 {
+	font-family: Sen;
+	font-size: 36px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: -2px;
+	text-align: left;
+	color: #232536;
+}
+.author_featured_post {
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.43;
+	letter-spacing: normal;
+	text-align: left;
+	color: #4c4c4c;
+}
+.author_featured_post a {
+	color: #592ea9;
+}
+.featured_post_title {
+	font-family: Sen;
+	font-size: 28px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.43;
+	letter-spacing: -1px;
+	text-align: left;
+	color: #232536;
+	width: 85%;
+}
+.featured_post_text {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: left;
+	color: #6d6e76;
+	margin-bottom: 2%;
+	width: 85%;
+}
+.featured_post_text_a {
+	font-family: Sen;
+	font-size: 18px;
+	font-weight: bold;
+	color: #232536;
+	width: 204px;
+	padding: 16px 47px;
+	background-color: #ffd050;
+	margin-top: 2%;
+}
+.all_posts {
+	width: 45%;
+}
+.all_posts_title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.all_posts_title h1 {
+	font-family: Sen;
+	font-size: 36px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: -2px;
+	text-align: left;
+	color: #232536;
+}
+.all_posts_title a {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: left;
+	color: #592ea9;
+}
 
 footer {
 	padding: 12px 80px 12px 80px;
@@ -182,7 +273,7 @@ footer {
 .footer_links {
 	display: flex;
 	align-items: center;
-	gap: 6%;
+	justify-content: space-between;
 	width: 34%;
 	white-space: nowrap;
 	font-family: Inter;
