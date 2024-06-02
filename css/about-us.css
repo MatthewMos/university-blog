@@ -413,14 +413,14 @@ footer {
 }
 .distribution {
 	display: flex;
-	margin: 56px 0 0 0;
+
 	flex-direction: row;
 	padding: 80px 64px;
 	background-color: rgb(46, 48, 64);
 }
 .distribution p {
 	font-family: "Montserrat Alternates", sans-serif;
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: bold;
 	font-stretch: normal;
 	font-style: normal;
@@ -428,6 +428,7 @@ footer {
 	letter-spacing: -2px;
 	text-align: left;
 	color: #fff;
+	text-align: center;
 }
 .distribution a {
 	font-family: "Montserrat Alternates", sans-serif;

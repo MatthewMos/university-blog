@@ -218,11 +218,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 0 80px 120px 80px;
+	margin: 128px 80px 120px 80px;
 }
 .mailing_title {
 	margin-bottom: 16px;
-	width: 420px;
+	width: 800px;
 	font-family: "Montserrat Alternates", sans-serif;
 	font-size: 36px;
 	font-weight: bold;
@@ -239,14 +239,16 @@
 	color: #6d6e76;
 }
 .mailing a {
-	width: 174px;
+	width: 250px;
 	padding: 16px 38px;
 	background-color: #ffd050;
 	font-family: "Montserrat Alternates", sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: #232536;
+	text-align: center;
 }
+
 footer {
 	padding: 12px 80px;
 	background-color: #232536;
@@ -275,7 +277,7 @@ footer {
 }
 .distribution {
 	display: flex;
-	margin-top: 56px;
+
 	gap: 20px;
 	align-items: center;
 	padding: 80px 64px;
@@ -283,9 +285,15 @@ footer {
 }
 .distribution p {
 	font-family: "Montserrat Alternates", sans-serif;
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: -2px;
+	text-align: left;
 	color: #fff;
+	text-align: center;
 }
 .distribution a {
 	font-family: "Montserrat Alternates", sans-serif;

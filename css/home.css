@@ -450,7 +450,7 @@ img {
 }
 .mailing_title {
 	margin-bottom: 16px;
-	width: 420px;
+	width: 800px;
 	font-family: "Montserrat Alternates", sans-serif;
 	font-size: 36px;
 	font-weight: bold;
@@ -467,13 +467,14 @@ img {
 	color: #6d6e76;
 }
 .mailing a {
-	width: 174px;
+	width: 250px;
 	padding: 16px 38px;
 	background-color: #ffd050;
 	font-family: "Montserrat Alternates", sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: #232536;
+	text-align: center;
 }
 
 footer {
@@ -514,14 +515,14 @@ footer {
 }
 .distribution {
 	display: flex;
-	margin: 56px 0 0 0;
+
 	flex-direction: row;
 	padding: 80px 64px;
 	background-color: rgb(46, 48, 64);
 }
 .distribution p {
 	font-family: "Montserrat Alternates", sans-serif;
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: bold;
 	font-stretch: normal;
 	font-style: normal;
@@ -529,6 +530,7 @@ footer {
 	letter-spacing: -2px;
 	text-align: left;
 	color: #fff;
+	text-align: center;
 }
 .distribution a {
 	font-family: "Montserrat Alternates", sans-serif;
