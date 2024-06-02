@@ -62,8 +62,8 @@ function open(e) {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      const email = error.customData.email;
       const credential = GoogleAuthProvider.credentialFromError(error);
+      const email = error.customData.email;
       // Handle errors here
     });
 }
