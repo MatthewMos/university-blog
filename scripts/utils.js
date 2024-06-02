@@ -62,7 +62,7 @@ export const getPostId = () =>
   window.location.href.split("/").pop().split(".")[0];
 
 export const generateComment = (userData) => {
-  `<div class="parents">
+  return `<div class="parents">
     <img src="${userData.image}">
     <div>
       <h1>${userData.name}</h1>
