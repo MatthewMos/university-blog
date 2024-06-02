@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../css/contact.css" />
+		<link rel="stylesheet" href="../css/author1.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -16,7 +16,7 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Обратная связь</title>
+		<title>Статьи</title>
 	</head>
 	<body>
 		<div class="nav">
@@ -30,53 +30,51 @@
 			<a class="nav_a" href="">Sign Up | Log In</a>
 		</div>
 
-		<div class="contact_us">
-			<h2>СВЯЗАТЬСЯ С НАМИ</h2>
-			<h3>Давайте начнем разговор</h3>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-			</p>
-		</div>
-
-		<div class="info_bar">
-			<div class="info_bar_working">
-				<h2>Время работы</h2>
-				<h3>
-					С понедельника по пятницу
-					<br />9:00 - 18:00
-				</h3>
-				<p>Наша служба поддержки доступна 24/7</p>
+		<div class="about_author">
+			<img class="about_author_img" src="../img/photo_matthew.jpg" alt="" />
+			<div class="about_author_text">
+				<h1>
+					Привет всем, я Москалёв Матвей, <br />
+					и добро пожаловать на наш блог
+				</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
+					blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At
+					risus viverra adipiscing at in tellus.
+				</p>
+				<div class="link_for_author">
+					<a href="https://t.me/MatthewMoskalev" target="_blank"
+						><img src="../img/telegram_logo_icon_256772.svg" alt=""
+					/></a>
+					<a href="https://vk.com/matthewmoskalev" target="_blank"
+						><img
+							src="../img/social_media_vk_vkontakte_community_network_logo_icon_225423.svg"
+							alt=""
+					/></a>
+					<a href="https://www.instagram.com/matthewmoskalev/" target="_blank"
+						><img src="../img/Instagram_New_icon-icons.com_69008.svg" alt=""
+					/></a>
+				</div>
 			</div>
-			<div class="info_bar_contact_us">
-				<h2>Cвязаться с нами</h2>
-				<h3>020 7993 2905</h3>
-				<p>hello@finsweet.com</p>
+		</div>
+
+		<div class="post_individual">
+			<h2>Мои статьи</h2>
+			<div class="post_1 post_item">
+				<img src="../img/photo-of-people-doing-handshakes-3183197.png" alt="" />
+				<div class="post_text">
+					<a class="type_of_post" href="">STARTUP</a>
+					<p class="name_post">
+						Design tips for designers that cover everything you need
+					</p>
+					<p class="name_post_text">
+						Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+						cupidatat non proident.
+					</p>
+				</div>
 			</div>
-		</div>
-
-		<div class="form">
-			<input type="text" name="Full_Name" value="Полное имя" />
-			<input
-				type="text"
-				name="Your_Email"
-				value="Ваш адрес электронной почты"
-			/>
-			<input type="text" name="Query_Related" value="Тема запроса" />
-			<input type="text" name="Message" value="Сообщение" />
-			<a href="">Отправить сообщение</a>
-		</div>
-
-		<div class="map">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2258.0951793737363!2d28.644771776867533!3d55.53071137300279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c48547ca3c357d%3A0x1042ccbb03ec8401!2sPolack%20State%20University!5e0!3m2!1sen!2sby!4v1717357043382!5m2!1sen!2sby"
-				width="100%"
-				height="450"
-				style="border: 0"
-				allowfullscreen=""
-				loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"
-			></iframe>
 		</div>
 
 		<footer>
@@ -103,9 +101,9 @@
 					required
 					placeholder="Ваша электронная почта"
 				/>
-				<a href="">>Подписаться</a>
+				<a href="">Подписаться</a>
 			</div>
 		</footer>
-		<script src="../scripts/contact.js" type="module"></script>
+		<script src="../scripts/author.js" type="module"></script>
 	</body>
 </html>
