@@ -112,6 +112,14 @@
 	display: flex;
 	gap: 32px;
 }
+.post_1 img,
+.post_2 img,
+.post_3 img,
+.post_4 img,
+.post_5 img {
+	width: 490px;
+	height: 318px;
+}
 
 .type_of_post {
 	margin: 45px 0 20px 0;
