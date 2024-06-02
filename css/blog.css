@@ -254,7 +254,8 @@ footer {
 	background-color: #232536;
 }
 .footer_nav {
-	margin-top: 1.5%;
+	margin: 1% 0 1% 0;
+	align-items: center;
 	display: flex;
 	font-family: Inter;
 	color: #fff;
