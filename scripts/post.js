@@ -47,6 +47,9 @@ shuffledPostsData.forEach((postData) => {
   postsSection.innerHTML += post;
 });
 
+const recommendationsPosts = document.querySelectorAll(
+  ".recommendations__post"
+);
 const userComment = document.querySelector(".usercomment");
 const publishBtn = document.querySelector("#publish");
 const comments = document.querySelector(".comments");
@@ -58,6 +61,13 @@ const anonymous = "../img/anonymous.png";
 
 let visibleComments = 5;
 let totalComments;
+
+recommendationsPosts.forEach((post) => {
+  post.addEventListener("click", () => {
+    const postId = post.classList[0];
+    window.location.href = `../pages/${postId}.html`;
+  });
+});
 
 userComment.addEventListener("input", () => {
   if (!userComment.value) {

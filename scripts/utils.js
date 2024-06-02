@@ -1,6 +1,6 @@
 export const createPost = (postData) => {
   const post = `
-	<div class="recommendations__post">
+	<div class="${postData.postId} recommendations__post">
 		<img
 			src="${postData.src}"
 			alt=""
