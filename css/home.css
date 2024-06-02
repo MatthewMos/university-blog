@@ -53,6 +53,8 @@ img {
 	font-weight: bold;
 	text-align: left;
 	color: #232536;
+	width: 200px;
+	height: 50px;
 }
 .links {
 	display: flex;
@@ -154,7 +156,7 @@ img {
 .featured_post {
 	width: 55%;
 	margin-right: 3%;
-	padding: 1.5%;
+	padding: 1% 1% 2% 1%;
 	border: solid 0.5px #6d6e76;
 }
 .featured_post h1 {
@@ -167,6 +169,7 @@ img {
 	letter-spacing: -2px;
 	text-align: left;
 	color: #232536;
+	margin-bottom: 1%;
 }
 .author_featured_post {
 	font-family: Inter;
@@ -178,6 +181,7 @@ img {
 	letter-spacing: normal;
 	text-align: left;
 	color: #4c4c4c;
+	margin-top: 1%;
 }
 .author_featured_post a {
 	color: #592ea9;
@@ -193,6 +197,7 @@ img {
 	text-align: left;
 	color: #232536;
 	width: 85%;
+	margin-bottom: 1%;
 }
 .featured_post_text {
 	font-family: Inter;
@@ -204,7 +209,7 @@ img {
 	letter-spacing: normal;
 	text-align: left;
 	color: #6d6e76;
-	margin-bottom: 2%;
+	margin-bottom: 4%;
 	width: 85%;
 }
 .featured_post_text_a {
@@ -247,6 +252,101 @@ img {
 	letter-spacing: normal;
 	text-align: left;
 	color: #592ea9;
+}
+.all_posts_1,
+.all_posts_2,
+.all_posts_3,
+.all_posts_4 {
+	display: flex;
+	flex-direction: column;
+	padding: 32px 116px 25px 32px;
+	background-color: #fff;
+}
+
+.all_categories {
+	display: flex;
+	flex-direction: column;
+	margin: 80px;
+}
+.categories {
+	display: flex;
+	flex-direction: row;
+	gap: 5%;
+	margin-top: 3%;
+}
+.categories img {
+	width: 22%;
+	border-radius: 25%;
+	padding: 12px;
+	background-color: #fbf6ea;
+}
+.business,
+.startup,
+.economy,
+.technology {
+	width: 296px;
+	padding: 32px;
+	border: solid 1px #6d6e76;
+}
+
+.business:hover,
+.startup:hover,
+.economy:hover,
+.technology:hover {
+	background-color: #ffd050;
+	opacity: 0.9;
+}
+.categories_title {
+	font-family: Sen;
+	font-size: 28px;
+	font-weight: bold;
+	color: #232536;
+}
+.categories_text {
+	font-family: Inter;
+	font-size: 16px;
+	line-height: 1.75;
+	color: #6d6e76;
+}
+.all_categories_p {
+	font-family: Sen;
+	font-size: 36px;
+	font-weight: bold;
+	color: #232536;
+}
+.mailing {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 80px 120px 80px;
+}
+.mailing_title {
+	margin-bottom: 16px;
+	width: 420px;
+	font-family: Sen;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	color: #232536;
+}
+.mailing_text {
+	width: 405px;
+	margin-bottom: 32px;
+	font-family: Inter;
+	font-size: 16px;
+	line-height: 1.75;
+	text-align: center;
+	color: #6d6e76;
+}
+.mailing a {
+	width: 174px;
+	padding: 16px 48px;
+	background-color: #ffd050;
+	font-family: Sen;
+	font-size: 18px;
+	font-weight: bold;
+	color: #232536;
 }
 
 footer {

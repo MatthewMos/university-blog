@@ -10,6 +10,7 @@
 	justify-content: space-between;
 }
 .nav p {
+	font-family: Inter;
 	font-size: 24px;
 	font-weight: bold;
 	color: #fff;

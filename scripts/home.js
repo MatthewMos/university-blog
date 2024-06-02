@@ -6,12 +6,10 @@ import {
 	signInWithPopup,
 	GoogleAuthProvider,
 	signOut,
+	onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
 	apiKey: "AIzaSyBqEITIHtmooTGZzseEZTCqFPmFc14I6WQ",
 	authDomain: "project-psu-b795e.firebaseapp.com",
@@ -29,6 +27,29 @@ const analytics = getAnalytics(app);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
+const signUp = document.querySelector(".nav_a");
+
+// Set the button content to empty initially
+signUp.textContent = "";
+signUp.style.padding = "16px 38px"; // Default padding
+
+const createSignUpButton = () => {
+	const img = document.querySelector(".nav_a > img");
+	if (img) {
+		img.remove();
+	}
+	signUp.textContent = "Sign Up | Log In";
+	signUp.style.padding = "16px 38px";
+};
+
+const createLogOutButton = () => {
+	const img = document.createElement("img");
+	img.src = "../img/door_icon_246428.svg";
+	signUp.textContent = "";
+	signUp.append(img);
+	signUp.style.padding = "16px 88px";
+};
+
 function open(e) {
 	e.preventDefault();
 	signInWithPopup(auth, provider)
@@ -36,42 +57,42 @@ function open(e) {
 			const credential = GoogleAuthProvider.credentialFromResult(result);
 			const token = credential.accessToken;
 			const user = result.user;
-			const signUp = document.querySelector(".nav_a");
-			const img = document.createElement("img");
-			img.src = "../img/door_icon_246428.svg";
-			signUp.textContent = "";
-			signUp.append(img);
-			signUp.style.padding = "16px 88px";
+			localStorage.setItem("user", JSON.stringify(user));
+			createLogOutButton();
 		})
 		.catch(error => {
 			const errorCode = error.code;
 			const errorMessage = error.message;
 			const email = error.customData.email;
 			const credential = GoogleAuthProvider.credentialFromError(error);
-			// ...
+			// Handle errors here
 		});
 }
+
 function close(e) {
 	e.preventDefault();
 	signOut(auth)
 		.then(() => {
-			// Sign-out successful.
-			const signUp = document.querySelector(".nav_a");
-			const img = document.querySelector(".nav_a > img");
-			img.remove();
-			signUp.textContent = "Sign Up | Log In";
-			signUp.style.padding = "16px 38px";
+			localStorage.removeItem("user");
+			createSignUpButton();
 		})
 		.catch(error => {
-			// An error happened.
+			// Handle errors here
 		});
 }
 
-const signUp = document.querySelector(".nav_a");
 signUp.addEventListener("click", e => {
 	if (signUp.textContent === "Sign Up | Log In") {
 		open(e);
 	} else {
 		close(e);
+	}
+});
+
+onAuthStateChanged(auth, user => {
+	if (user) {
+		createLogOutButton();
+	} else {
+		createSignUpButton();
 	}
 });
