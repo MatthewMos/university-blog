@@ -426,6 +426,12 @@ footer {
   padding: 10px;
 }
 
+.commentinput {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .commentinput > input {
   border: none;
   padding: 10px;
@@ -433,7 +439,7 @@ footer {
   outline: none;
   border-bottom: 2px solid blue;
   margin-bottom: 10px;
-  width: 95%;
+  width: 70%;
 }
 
 .buttons {
@@ -486,4 +492,13 @@ footer {
 .date {
   color: #808080;
   font-size: 0.8em;
+}
+#showMore,
+#showLess {
+  background: none;
+  border: none;
+}
+#showMore:hover,
+#showLess:hover {
+  text-decoration: underline;
 }

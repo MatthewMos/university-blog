@@ -54,6 +54,10 @@ const userName = document.querySelector(".user");
 const userImage = document.querySelector(".commentbox__image");
 const commentsAmount = document.querySelector("#comment");
 const commentsText = document.querySelector(".comment__text");
+const anonymous = "../img/anonymous.png";
+
+let visibleComments = 5;
+let totalComments;
 
 userComment.addEventListener("input", () => {
   if (!userComment.value) {
@@ -64,6 +68,38 @@ userComment.addEventListener("input", () => {
     publishBtn.classList.add("active");
   }
 });
+
+const showMoreBtn = document.getElementById("showMore");
+const showLessBtn = document.getElementById("showLess");
+
+const renderComments = () => {
+  const allComments = document.querySelectorAll(".parents");
+  allComments.forEach((comment, index) => {
+    if (index < visibleComments) {
+      comment.style.display = "flex";
+    } else {
+      comment.style.display = "none";
+    }
+  });
+
+  if (visibleComments < totalComments) {
+    showMoreBtn.style.display = "block";
+    showLessBtn.style.display = "none";
+  } else {
+    showMoreBtn.style.display = "none";
+    showLessBtn.style.display = "block";
+  }
+};
+
+const showMoreComments = () => {
+  visibleComments += 5;
+  renderComments();
+};
+
+const showLessComments = () => {
+  visibleComments = 5;
+  renderComments();
+};
 
 const addCommentToFirestore = async (postId, commentData) => {
   const postsRef = collection(db, "posts");
@@ -79,14 +115,16 @@ const addCommentToFirestore = async (postId, commentData) => {
 const loadCommentsFromFirestore = async (postId) => {
   const postsRef = collection(db, "posts");
   const post = doc(postsRef, postId);
-  const q = query(collection(post, "comments"), orderBy("date", "asc"));
+  const q = query(collection(post, "comments"), orderBy("date", "desc"));
   const querySnapshot = await getDocs(q);
+  totalComments = querySnapshot.docs.length;
   querySnapshot.forEach((doc) => {
     const commentData = doc.data();
     renderComment(comments, commentData);
   });
   commentsAmount.innerText = querySnapshot.docs.length;
   rerenderCommentsText(commentsAmount, commentsText);
+  renderComments();
 };
 
 window.onload = () => {
@@ -101,15 +139,15 @@ const addComment = async (userData) => {
   userData.message = userComment.value;
   userData.date = new Date().toLocaleString();
 
-  if (userData.name === "Анонимус") {
+  if (userData.name === "Anonymous") {
     userData.identity = false;
-    userData.image = "../img/anonymous.png";
+    userData.image = anonymous;
   } else {
     userData.identity = true;
   }
 
   const published = generateComment(userData);
-  comments.innerHTML += published;
+  comments.insertAdjacentHTML("afterbegin", published);
 
   userComment.value = "";
   publishBtn.classList.remove("active");
@@ -118,7 +156,11 @@ const addComment = async (userData) => {
   commentsAmount.innerText = +commentsAmount.innerText + 1;
   await addCommentToFirestore(postId, userData);
   rerenderCommentsText(commentsAmount, commentsText);
+  renderComments();
 };
+
+showMoreBtn.addEventListener("click", showMoreComments);
+showLessBtn.addEventListener("click", showLessComments);
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -133,6 +175,8 @@ onAuthStateChanged(auth, (user) => {
     userImage.src = userData.image;
     publishBtn.addEventListener("click", () => addComment(userData));
   } else {
+    userName.value = "Anonymous";
+    userImage.src = anonymous;
     publishBtn.addEventListener("click", () => addComment(NULL_USER));
   }
 });
