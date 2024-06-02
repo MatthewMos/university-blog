@@ -206,6 +206,51 @@
 	text-align: left;
 	color: #6d6e76;
 }
+.info {
+	display: flex;
+	flex-direction: row;
+	margin: 0 80px 130px 96px;
+	justify-content: space-between;
+}
+.info_text {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 60px;
+}
+.info_text h2 {
+	font-family: "Montserrat Alternates", sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: -2px;
+	text-align: left;
+	color: #232536;
+}
+.info_text h3 {
+	font-family: "Montserrat Alternates", sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.33;
+	letter-spacing: normal;
+	text-align: left;
+	color: #232536;
+}
+.info_text p {
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	text-align: left;
+	color: #232536;
+}
 
 .list_of_authors {
 	margin: 15px 80px 15px 80px;
