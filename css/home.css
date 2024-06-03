@@ -64,7 +64,8 @@ img {
 	color: #fff;
 }
 .baner {
-	background-image: url(../img/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.png);
+	background-image: url(../img/image_CBO.png);
+	background-size: cover;
 	padding: 128px 556px 192px 80px;
 }
 .title_text {
@@ -73,11 +74,10 @@ img {
 	gap: 0.5%;
 	font-family: Inter;
 	font-size: 16px;
-
 	line-height: 1.25;
 	letter-spacing: 3px;
 	text-align: left;
-	color: #fff;
+	color: #000;
 	margin-bottom: 2%;
 }
 .title_text_2 {
@@ -92,7 +92,7 @@ img {
 	line-height: 1.14;
 	letter-spacing: -2px;
 	text-align: left;
-	color: #fff;
+	color: #000;
 	margin-bottom: 2%;
 }
 .author_title {
@@ -118,6 +118,12 @@ img {
 	text-align: left;
 	color: #ffd050;
 }
+
+/* .back_color {
+	background-color: rgb(255, 208, 80, 0.3);
+	box-shadow: 1px 1px 1px 1px #000;
+} */
+
 .baner p {
 	font-family: Inter;
 	font-size: 16px;
@@ -126,7 +132,7 @@ img {
 	line-height: 1.75;
 	letter-spacing: normal;
 	text-align: left;
-	color: #fff;
+	color: #000;
 	margin-bottom: 3%;
 }
 .title_text_a {

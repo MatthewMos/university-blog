@@ -44,9 +44,11 @@
 	background-color: #f4f0f8;
 	padding: 150px 125px;
 	gap: 35px;
+	align-items: center;
 }
 .about_author_img {
 	width: 251px;
+	height: 251px;
 }
 .about_author_text {
 	display: flex;
@@ -119,6 +121,7 @@
 .post_5 img {
 	width: 490px;
 	height: 300px;
+	box-shadow: -2px 2px 14px 5px #232536;
 }
 
 .type_of_post {
