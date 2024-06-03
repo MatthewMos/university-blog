@@ -50,7 +50,7 @@ export const renderComment = (comments, commentData) => {
     <div class="parents">
       <img src="${commentData.image}">
       <div>
-        <h1>${commentData.name}</h1>
+        <h1 class="comment__author">${commentData.name}</h1>
         <p>${commentData.message}</p>
         <span class="date">${commentData.date}</span>
       </div>    
