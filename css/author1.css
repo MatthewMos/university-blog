@@ -1,0 +1,112 @@
+/* импортируем обнуление */
+@import url("./reset.css");
+@import url("./footer.css");
+@import url("./header.css");
+
+.about_author {
+  display: flex;
+  flex-direction: row;
+  background-color: #f4f0f8;
+  padding: 150px 125px;
+  gap: 35px;
+  align-items: center;
+}
+.about_author_img {
+  width: 251px;
+  height: 251px;
+}
+.about_author_text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px 30px;
+}
+.about_author_text h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -2px;
+  text-align: left;
+  color: #232536;
+}
+.about_author_text p {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6d6e76;
+}
+.link_for_author {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.link_for_author img {
+  width: 20px;
+  height: 20px;
+}
+
+.post_individual {
+  display: flex;
+  flex-direction: column;
+  margin: 130px 125px 130px 125px;
+}
+.post_individual h2 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -2px;
+  text-align: left;
+  color: #232536;
+}
+
+.post_1,
+.post_2,
+.post_3,
+.post_4,
+.post_5 {
+  margin-top: 64px;
+  display: flex;
+  gap: 32px;
+}
+.post_1 img,
+.post_2 img,
+.post_3 img,
+.post_4 img,
+.post_5 img {
+  width: 490px;
+  height: 300px;
+  box-shadow: -2px 2px 14px 5px #232536;
+}
+
+.type_of_post {
+  margin: 45px 0 20px 0;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #592ea9;
+}
+.name_post {
+  margin: 20px 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #232536;
+}
+.name_post_text {
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #6d6e76;
+}

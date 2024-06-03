@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Обратная связь</title>
+  </head>
+  <body>
+    <div class="nav">
+      <p>Официальный сайт ХТ</p>
+      <div class="links">
+        <a href="./home.html">Главная</a>
+        <a id="navBlog" href="./blog.html">Статьи</a>
+        <a href="./about-us.html">О нас</a>
+        <a href="./contact.html">Обратная связь</a>
+      </div>
+      <a class="nav_a" href="">Sign Up | Log In</a>
+      <div class="burger-menu" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="burger-links" id="burger-links">
+      <a href="./home.html">Главная</a>
+      <a id="navBlog" href="./blog.html">Статьи</a>
+      <a href="./about-us.html">О нас</a>
+      <a href="./contact.html">Обратная связь</a>
+    </div>
+
+    <div class="contact_us">
+      <h2>СВЯЗАТЬСЯ С НАМИ</h2>
+      <h3>Давайте начнем разговор</h3>
+      <p>
+        Оставляйте комментарии, пишите вопросы, дадим ответы в кратчайшие сроки
+      </p>
+    </div>
+
+    <div class="form_section">
+      <div class="info_bar">
+        <div class="info_bar_working">
+          <h2>Время работы</h2>
+          <h3>
+            С понедельника по пятницу
+            <br />9:00 - 18:00
+          </h3>
+          <p>Наша служба поддержки доступна 24/7</p>
+        </div>
+        <div class="info_bar_contact_us">
+          <h2>Cвязаться с нами</h2>
+          <h3>020 7993 2905</h3>
+          <p>hello@finsweet.com</p>
+        </div>
+      </div>
+
+      <form class="form">
+        <input
+          type="text"
+          name="to_name"
+          id="to_name"
+          placeholder="Полное имя"
+        />
+        <input
+          type="text"
+          name="to_email"
+          id="email"
+          placeholder="Ваш адрес электронной почты"
+        />
+        <input type="text" id="topic" name="topic" placeholder="Тема запроса" />
+        <input
+          type="text"
+          id="message"
+          name="message"
+          placeholder="Сообщение"
+        />
+        <button type="submit" class="submit__form">Отправить сообщение</button>
+      </form>
+    </div>
+
+    <div id="notification" class="notification hidden">
+      Форма успешно отправлена!
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2258.0951793737363!2d28.644771776867533!3d55.53071137300279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c48547ca3c357d%3A0x1042ccbb03ec8401!2sPolack%20State%20University!5e0!3m2!1sen!2sby!4v1717357043382!5m2!1sen!2sby"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <footer>
+      <div class="footer_nav">
+        <p>Официальный сайт ХТ</p>
+        <div class="links">
+          <a href="./home.html">Главная</a>
+          <a href="./blog.html">Статьи</a>
+          <a href="./about-us.html">О нас</a>
+          <a href="./contact.html">Обратная связь</a>
+        </div>
+      </div>
+      <div class="distribution">
+        <p>
+          Подпишитесь на наше информационное письмо, <br />чтобы получать
+          последние обновления и новостную рассылку
+        </p>
+        <input
+          type="email"
+          id="email"
+          class=".distribution_input"
+          pattern=".+@example\.com"
+          size="30"
+          required
+          placeholder="Ваша электронная почта"
+        />
+        <a href="">Подписаться</a>
+      </div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      emailjs.init({
+        publicKey: "ICMlt5bzlafyorDVT",
+      });
+      const form = document.querySelector(".form");
+      const submitButton = document.querySelector(".submit__form");
+      const notification = document.getElementById("notification");
+
+      const showNotification = () => {
+        notification.classList.remove("hidden");
+        notification.classList.add("show");
+        setTimeout(() => {
+          notification.classList.remove("show");
+          notification.classList.add("hidden");
+        }, 3000);
+      };
+
+      const checkFormValidity = () => {
+        const isFormValid = [...form.elements]
+          .slice(0, form.elements.length - 1)
+          .every((input) => input.value.trim() !== "");
+        submitButton.disabled = !isFormValid;
+      };
+
+      checkFormValidity();
+
+      form.addEventListener("input", checkFormValidity);
+
+      const serviceId = "service_ftr2z2j";
+      const templateId = "template_9egjibh";
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const dataMap = {};
+        formData.forEach((value, key) => {
+          dataMap[key] = value;
+        });
+        emailjs.sendForm(serviceId, templateId, form, dataMap).then(() => {
+          console.log("sent!");
+          form.reset();
+          submitButton.disabled = true;
+          showNotification();
+        });
+      });
+    </script>
+    <script src="../scripts/burger.js"></script>
+  </body>
+</html>

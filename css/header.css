@@ -1,0 +1,133 @@
+/* Основные стили */
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 31px 12px 80px;
+	background-color: #232536;
+}
+
+.nav p {
+	font-family: "Montserrat Alternates", sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	white-space: nowrap;
+}
+
+.nav_a {
+	cursor: pointer;
+	padding: 16px 48px;
+	background-color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	color: #232536;
+	white-space: nowrap;
+	border: none;
+	font-family: "Montserrat Alternates", sans-serif;
+}
+
+.links {
+	display: flex;
+	gap: 20px;
+}
+
+.links a {
+	font-family: "Montserrat Alternates", sans-serif;
+	font-size: 16px;
+	color: #fff;
+}
+
+.burger-menu {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	z-index: 14;
+}
+
+.burger-menu span {
+	width: 35px;
+	height: 3px;
+	background-color: #fff;
+	margin: 4px;
+	transition: 0.3s;
+}
+
+.burger-menu.open span:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 1px);
+}
+
+.burger-menu.open span:nth-child(2) {
+	opacity: 0;
+}
+
+.burger-menu.open span:nth-child(3) {
+	transform: rotate(-45deg) translate(14px, -10px);
+}
+
+/* Стили для затемнения фона */
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9;
+}
+
+.overlay.show {
+	display: block;
+}
+
+.burger-links {
+	font-family: "Montserrat Alternates", sans-serif;
+	display: flex;
+	flex-direction: column;
+	background-color: #232536;
+	position: fixed;
+	top: 0;
+	right: -250px;
+	width: 250px;
+	height: 100%;
+	padding: 20px;
+	z-index: 10;
+	transition: right 0.3s ease;
+}
+
+.burger-links.show {
+	right: 0;
+}
+
+.burger-links a {
+	color: #fff;
+	padding: 15px 0;
+	text-align: left;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+	.burger-menu {
+		display: flex;
+	}
+
+	.nav .links {
+		display: none;
+	}
+
+	.nav_a {
+		padding: 16px 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.nav {
+		padding: 12px 20px;
+	}
+
+	.nav_a {
+		padding: 8px 16px;
+		font-size: 16px;
+	}
+}
