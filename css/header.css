@@ -8,6 +8,7 @@
 }
 
 .nav p {
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 24px;
   font-weight: bold;
   color: #fff;
@@ -80,6 +81,7 @@
 }
 
 .burger-links {
+  font-family: "Montserrat Alternates", sans-serif;
   display: flex;
   flex-direction: column;
   background-color: #232536;
