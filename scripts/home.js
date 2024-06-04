@@ -98,9 +98,11 @@ onAuthStateChanged(auth, user => {
 
 const authors = document.querySelectorAll(".author_individual");
 authors.forEach(author =>
-	author.addEventListener("click", () => {
-		const authorId = author.classList[0].replace("_individual_", "");
-		window.location.href = `../pages/${authorId}.html`;
+	author.addEventListener("click", e => {
+		if (e.target.tagName !== "A" || e.target.tagName !== "IMG") {
+			const authorId = author.classList[0].replace("_individual_", "");
+			window.location.href = `../pages/${authorId}.html`;
+		}
 	})
 );
 
